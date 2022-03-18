@@ -32,7 +32,7 @@ session_start();
         </a>
 		  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="addmeet.php">จองห้องประชุม</a>
-          <a class="dropdown-item" href="#">เมนูที่ 2.2</a>
+          <a class="dropdown-item" href="calendar.php">ค้นหาห้องประชุม</a>
 		    <a class="dropdown-item" href="#">เมนูที่ 2.3</a>
         </div>
  

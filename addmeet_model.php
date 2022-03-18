@@ -24,7 +24,7 @@
 	$meetfilelocation=$fileDes;
 	
 	
-	$sql = "INSERT INTO meeting(title,head,numattend,listname,roomid,start,end,addequipment,uesrid,remark,meetfile) VALUES ('$title','$head',$numattend,'$listname',$roomid,'$start','$end','$addequipment',$userid,'$remark','$meetfilelocation')";
+	$sql = "INSERT INTO events(title,head,numattend,listname,roomid,start,end,addequipment,uesrid,remark,meetfile) VALUES ('$title','$head',$numattend,'$listname',$roomid,'$start','$end','$addequipment',$userid,'$remark','$meetfilelocation')";
 	mysqli_query($conn,$sql);
 	
 	header('location:addmeet.php');

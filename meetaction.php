@@ -8,7 +8,7 @@
                 </div>
                 <div class="modal-body">
 				<?php
-					$del=mysqli_query($conn,"select * from meeting  where meetid='".$row['meetid']."'");
+					$del=mysqli_query($conn,"select * from events  where meetid='".$row['meetid']."'");
 					$drow=mysqli_fetch_array($del);
 				?>
 				<div class="container-fluid">
@@ -26,7 +26,7 @@
 <!-- /.modal -->
 
 <!-- Edit -->
-    <div class="modal fade" id="edit<?php echo $row['roomid']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="edit<?php echo $row['meetid']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -35,27 +35,65 @@
                 </div>
                 <div class="modal-body">
 				<?php
-					$edit=mysqli_query($conn,"select * from room where roomid='".$row['roomid']."'");
+					$edit=mysqli_query($conn,"select * from events where meetid='".$row['meetid']."'");
 					$erow=mysqli_fetch_array($edit);
 				?>
 				<div class="container-fluid">
-				<form method="POST" action="editroom.php?roomid=<?php echo $erow['roomid']; ?>">
+				<form method="POST" action="editmeet.php?meetid=<?php echo $erow['meetid']; ?>">
 					<div class="row">
+  
 						<div class="col-lg-2">
-							<label style="position:relative; top:7px;">username:</label>
+							<label style="position:relative; top:7px;">Title:</label>
 						</div>
 						<div class="col-lg-10">
-							<input type="text" name="roomname" class="form-control" value="<?php echo $erow['roomname']; ?>">
+							<input type="text" name="title" class="form-control" value="<?php echo $erow['title']; ?>">
 						</div>
 					</div>
 					<div style="height:10px;"></div>
 					<div class="row">
 						<div class="col-lg-2">
-							<label style="position:relative; top:7px;">password:</label>
+							<label style="position:relative; top:7px;">head</label>
 						</div>
 						<div class="col-lg-10">
-							<input type="text" name="location" class="form-control" value="<?php echo $erow['location']; ?>">
+							<input type="text" name="head" class="form-control" value="<?php echo $erow['head']; ?>">
 						</div>
+					</div>
+                    <div style="height:10px;"></div>
+					<div class="row">
+						<div class="col-lg-2">
+							<label style="position:relative; top:7px;">numattend</label>
+						</div>
+						<div class="col-lg-10">
+							<input type="text" name="numattend" class="form-control" value="<?php echo $erow['numattend']; ?>">
+						</div>
+					</div>
+                    <div class="row">
+						<div class="col-lg-2">
+							<label style="position:relative; top:7px;">roomid</label>
+						</div>
+						<div class="col-lg-10">
+							<input type="text" name="roomid" class="form-control" value="<?php echo $erow['roomid']; ?>">
+						</div>
+                        <div style="height:10px;"></div>
+					<div class="row">
+						<div class="col-lg-2">
+							<label class="control-label" style="position:relative; top:7px;">start</label>
+						</div>
+						<div class="col-lg-10">
+							<input type="datetime" class="form-control" name="start" value="<?php echo $erow['start'];?>">
+						</div>
+					</div>		
+					<div style="height:10px;"></div>
+					<div class="row">
+						<div class="col-lg-2">
+							<label class="control-label" style="position:relative; top:7px;">end</label>
+						</div>
+						<div class="col-lg-10">
+							<input type="datetime" class="form-control" name="end" value="<?php echo $erow['end'];?>">
+						</div>
+					</div>		
+					<div style="height:10px;"></div>
+					<div class="row">
 					</div>
 
                 </div> 
