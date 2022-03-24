@@ -63,6 +63,9 @@ if (isset($_POST['searchhead']) && isset($_POST['searchroom']))
 		$sql = "SELECT * FROM events where head = '$searchhead' && roomid = '$searchroom'";
 	}
 
+}else{
+	$sql = "SELECT * FROM events";	
+	
 }
 
 $req = $bdd->prepare($sql);
