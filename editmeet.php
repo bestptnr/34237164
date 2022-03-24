@@ -10,7 +10,7 @@
 
 
 	
-	mysqli_query($conn,"update events set roomid='$roomid', title='$title',  head='$head', start='$start',end='$end',numattend='$numattend' where meetid='$meetid'");
+	mysqli_query($conn,"update events set roomid='$roomid', title='$title',  head='$head', start='$start',end='$end',numattend='$numattend' where id='$meetid'");
 	// echo "update events set roomid='$roomid', title='$title',  head='$head', start='$start',end='$end',numattend='$numattend' where meetid='$meetid'";
 	header('location:addmeet.php');
 
