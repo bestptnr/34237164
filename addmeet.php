@@ -13,7 +13,20 @@
 
   </head>
   <body>
-<?php include("adminmenu.php"); ?>
+<?php
+session_start();
+ 
+if($_SESSION['user']!='admin'){
+	include('usermenu.php');
+}else{
+	include("adminmenu.php"); 
+}
+
+
+
+
+
+?>
 
 <div>
   <img src="img/meeting.png" class="center-block img-fluid" alt="Responsive image">

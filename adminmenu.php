@@ -1,6 +1,4 @@
-<?php  
-session_start(); 
-?> 
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
   <!-- Just an image -->
@@ -26,20 +24,16 @@ session_start();
       </li>
 
 
-      <li class="nav-item dropdown ">
-        <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+      <li class="nav-item  ">
+        <a class="nav-link  " href="addmeet.php">
          จองห้องประชุม
         </a>
-		  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="addmeet.php">จองห้องประชุม</a>
-          <a class="dropdown-item" href="calendar.php">ค้นหาห้องประชุม</a>
-		    <a class="dropdown-item" href="#">เมนูที่ 2.3</a>
-        </div>
+
  
       </li>
       <li class="nav-item ">
-        <a class="nav-link " href="" >
-          ตรวจสอบห้องประชุม   
+        <a class="nav-link " href="calendar.php" >
+          ค้นหาห้องประชุม
         </a>
       </li>
       <li class="nav-item ">
@@ -62,18 +56,11 @@ session_start();
     <div class="ml-md-2 my-lg-0">
 	  
   <?php 
-    //check session 
-     if (isset($_SESSION['user'])) 
-   {
+
       echo "<p style='color:white'>ยินดีต้อนรับ "; 
       echo $_SESSION['user']; 
       echo "</p>";
-   }
-	else 
-   {
-    echo "<script>alert('คุณยังไม่ได้เข้าสู่ระบบ กลับไปยังหน้าเข้าสู่ระบบก่อน')</script>"; 
-    echo "<script>window.open('login.php','_self')</script>"; 
-  } 
+   
   ?>
 
       <a href="logout.php" class="btn btn-primary" role="button">ออกจากระบบ</a>

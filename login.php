@@ -109,9 +109,11 @@ if(isset($_POST['login']))
         if ($row['type']=="01")
 		{	
 			$_SESSION['user'] = $username;
+			echo 	$_SESSION['user'];
 			echo "<script>window.open('adminpage.php','_self')</script>";
 		}else{
 			$_SESSION['user'] = $username;
+			echo 	$_SESSION['user'];
 			echo "<script>window.open('userpage.php','_self')</script>";
 		}
     }  

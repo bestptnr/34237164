@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<?php
+session_start();
+ 
+if($_SESSION['user']!='admin'){
+	include('usermenu.php');
+}else{
+	include("adminmenu.php"); 
+}
+
+
+
+?>
 <html>
     <head>
     <!-- Bootstrap CSS -->
@@ -7,7 +19,7 @@
     <title>ระบบจองห้องประชุม</title>
    </head>
 
-<?php include("adminmenu.php"); ?>
+
 
 <div>
   <img src="img/meeting.png" class="center-block img-fluid" alt="Responsive image">
@@ -77,8 +89,8 @@ $events = $req->fetchAll();
 ?>
 
  
-	</table>
-	<center><table style="width:70%">
+	
+	<table style="width:50%;margin:0 auto;">
   	<tr>
     <th>
 	<form method="POST" action="calendar.php">	
@@ -109,7 +121,7 @@ $events = $req->fetchAll();
 	<th><span style="font-size:20px; color:white;"><center><strong>คลิ๊ก </strong></center></span>  <button type="submit" class="btn btn-primary">ค้นหา</button> </th>
 
  	</tr>
-    </table></center>
+    </table>
 
 
 
@@ -122,7 +134,7 @@ $events = $req->fetchAll();
                 <p class="lead">
 					<?php 
 					if (isset($_POST['searchhead']) || isset($_POST['searchroom']))		
-					echo "ประธานชื่อ ". $_POST['searchhead'] ."  ห้องประชุม  ". $_POST['searchroom']."   ".$sql ; 
+					echo "ประธานชื่อ ". $_POST['searchhead'] ."  ห้องประชุม  ". $_POST['searchroom']; 
 					?>
 				
 				</p>
