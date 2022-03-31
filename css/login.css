@@ -8,10 +8,10 @@
    #
    ##################################################################### */
    
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200&display=swap');
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans Thai', sans-serif;
 }
 
 #login-modal .modal-dialog {

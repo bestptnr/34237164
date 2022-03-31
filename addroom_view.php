@@ -5,62 +5,61 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <center><h4 class="modal-title" id="myModalLabel">เพิ่มห้องประชุม</h4></center>
+                   <h4 class="modal-title" id="myModalLabel"><b>เพิ่มห้องประชุม</b> </h4>
                 </div>
                 <div class="modal-body">
 				<div class="container-fluid">
 				<form method="POST" action="addroom_model.php">
 					<div class="row">
-						<div class="col-lg-2">
+						<div class="col-lg-3">
 							<label class="control-label" style="position:relative; top:7px;">ชื่อห้อง:</label>
 						</div>
-						<div class="col-lg-10">
+						<div class="col-lg-9">
 							<input type="text" class="form-control" name="roomname">
 						</div>
 					</div>
 					<div style="height:10px;"></div>
 					<div class="row">
-						<div class="col-lg-2">
+						<div class="col-lg-3">
 							<label class="control-label" style="position:relative; top:7px;">สถานที่:</label>
 						</div>
-						<div class="col-lg-10">
+						<div class="col-lg-9">
 							<input type="text" class="form-control" name="location">
 						</div>
 					</div>
 					<div style="height:10px;"></div>
 					<div class="row">
-						<div class="col-lg-2">
+						<div class="col-lg-3">
 							<label class="control-label" style="position:relative; top:7px;">ความจุ:</label>
 						</div>
-						<div class="col-lg-10">
+						<div class="col-lg-9">
 							<input type="text" class="form-control" name="capacity">
 						</div>
 					</div>
 					<div style="height:10px;"></div>
 					<div class="row">
-						<div class="col-lg-2">
+						<div class="col-lg-3">
 							<label class="control-label" style="position:relative; top:7px;">มีโปรเจคเตอร์:</label>
 						</div>
-						<div class="col-lg-10">
+						<div class="col-lg-9">
 							<input type="text" class="form-control" name="projector">
 						</div>
 					</div>
 					<div style="height:10px;"></div>
 					<div class="row">
-						<div class="col-lg-2">
+						<div class="col-lg-3">
 							<label class="control-label" style="position:relative; top:7px;">มีไมโครโฟน:</label>
 						</div>
-						<div class="col-lg-10">
+						<div class="col-lg-9">
 							<input type="text" class="form-control" name="microphone">
 						</div>
 					</div>
 					<div style="height:10px;"></div>
 					<div class="row">
-						<div class="col-lg-2">
+						<div class="col-lg-3">
 							<label class="control-label" style="position:relative; top:7px;">อื่นๆ:</label>
 						</div>
-						<div class="col-lg-10">
+						<div class="col-lg-9">
 							<input type="text" class="form-control" name="others">
 						</div>
 					</div>

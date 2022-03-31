@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>ระบบจองห้องประชุม</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200&display=swap" rel="stylesheet">
+	<style>
+		*{
+			font-family: 'Noto Sans Thai', sans-serif;
+			font-weight: bold;
+		}
+	</style>
 
   </head>
   <body>
@@ -29,7 +36,7 @@ if($_SESSION['user']!='admin'){
 ?>
 
 <div>
-  <img src="img/meeting.png" class="center-block img-fluid" alt="Responsive image">
+<img src="img/meeting.jpg" class="center-block img-fluid" alt="Responsive image" style="height: 500px;" >
 </div>
 
 <div class="container">
@@ -38,8 +45,8 @@ if($_SESSION['user']!='admin'){
 	<span style="font-size:25px; color:blue"><center><strong>เพิ่มการประชุม</strong></center></span>	
 		<span class="pull-left"><a href="#addnew" data-toggle="modal" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add New</a></span>
 		<div style="height:50px;"></div>
-		<table class="table table-striped table-bordered table-hover">
-			<thead>
+		<table class="table table-striped table-bordered table-hover ">
+			<thead class="table-dark">
 				<th>รหัสการจอง</th>
 				<th>วาระประชุม</th>
 				<th>ประธานการประชุม</th>
@@ -48,6 +55,7 @@ if($_SESSION['user']!='admin'){
                 <th>วันเวลาเริ่มประชุม</th>
 				<th>วันเวลาสิ้นสุดการประชุม</th>
 				<th>จัดการ</th>
+				<th></th>
 			</thead>
 			<tbody>
 			<?php

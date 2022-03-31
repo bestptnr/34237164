@@ -42,53 +42,62 @@
 				<form method="POST" action="editmeet.php?meetid=<?php echo $erow['id']; ?>">
 					<div class="row">
   
-						<div class="col-lg-2">
+						<div class="col-lg-3">
 							<label style="position:relative; top:7px;">Title:</label>
 						</div>
-						<div class="col-lg-10">
+						<div class="col-lg-9">
 							<input type="text" name="title" class="form-control" value="<?php echo $erow['title']; ?>">
 						</div>
 					</div>
 					<div style="height:10px;"></div>
 					<div class="row">
-						<div class="col-lg-2">
+						<div class="col-lg-3">
 							<label style="position:relative; top:7px;">head</label>
 						</div>
-						<div class="col-lg-10">
+						<div class="col-lg-9">
 							<input type="text" name="head" class="form-control" value="<?php echo $erow['head']; ?>">
 						</div>
 					</div>
                     <div style="height:10px;"></div>
 					<div class="row">
-						<div class="col-lg-2">
+						<div class="col-lg-3">
 							<label style="position:relative; top:7px;">numattend</label>
 						</div>
-						<div class="col-lg-10">
+						<div class="col-lg-9">
 							<input type="text" name="numattend" class="form-control" value="<?php echo $erow['numattend']; ?>">
 						</div>
 					</div>
+					<div style="height:10px;"></div>
+
                     <div class="row">
-						<div class="col-lg-2">
+						<div class="col-lg-3">
 							<label style="position:relative; top:7px;">roomid</label>
 						</div>
-						<div class="col-lg-10">
+						<div class="col-lg-9">
 							<input type="text" name="roomid" class="form-control" value="<?php echo $erow['roomid']; ?>">
 						</div>
                         <div style="height:10px;"></div>
+				
+
+
+					</div>	
+					<div style="height:10px;"></div>
+		
 					<div class="row">
-						<div class="col-lg-2">
+						
+						<div class="col-lg-3">
 							<label class="control-label" style="position:relative; top:7px;">start</label>
 						</div>
-						<div class="col-lg-10">
+						<div class="col-lg-9">
 							<input type="datetime" class="form-control" name="start" value="<?php echo $erow['start'];?>">
 						</div>
 					</div>		
 					<div style="height:10px;"></div>
 					<div class="row">
-						<div class="col-lg-2">
+						<div class="col-lg-3">
 							<label class="control-label" style="position:relative; top:7px;">end</label>
 						</div>
-						<div class="col-lg-10">
+						<div class="col-lg-9">
 							<input type="datetime" class="form-control" name="end" value="<?php echo $erow['end'];?>">
 						</div>
 					</div>		
@@ -97,7 +106,7 @@
 					</div>
 
                 </div> 
-				</div>
+				</div>	
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
                     <button type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-check"></span> Save</button>

@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>ระบบจองห้องประชุม</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200&display=swap" rel="stylesheet">
+	<style>
+		*{
+			font-family: 'Noto Sans Thai', sans-serif;
+            font-weight: bold;
+		}
+	</style>
     
 
   </head>

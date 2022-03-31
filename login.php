@@ -10,8 +10,15 @@ session_start();
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
+	
     <title>ระบบจองห้องประชุม</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200&display=swap" rel="stylesheet">
+	<style>
+		*{
+			font-family: 'Noto Sans Thai', sans-serif;    font-weight: bold;
+		}
+	</style>
     
 
   </head>
@@ -34,7 +41,7 @@ session_start();
 
     </ul>
     <div class="ml-md-2 my-lg-0">
-      <a href="login.php" class="btn btn-primary" role="button">เข้าสู่ระบบ</a>
+      <a href="login.php" class="btn btn-primary" role="button"><b>เข้าสู่ระบบ</b></a>
     </div>
   </div>
   </div>
@@ -48,7 +55,7 @@ session_start();
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
 					<div class="brand_logo_container">
-					<a class="navbar-brand">เข้าใช้งานระบบ</a>
+					<a class="navbar-brand"> <b>เข้าใช้งานระบบ</b> </a>
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
