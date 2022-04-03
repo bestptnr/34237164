@@ -47,7 +47,7 @@ session_start();
   </div>
 </nav>
 <div>
-  <img src="img/meeting.png" class="center-block img-fluid" alt="Responsive image">
+<img src="img/meeting.jpg" class="center-block img-fluid" alt="Responsive image" style="height: 500px;" >
 </div>
 
 	<div class="container h-100">

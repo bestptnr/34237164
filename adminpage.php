@@ -39,7 +39,7 @@ echo "<script>window.open('login.php','_self')</script>";
   <body>
   <?php include('adminmenu.php') ?>
 <div>
-  <img src="img/meeting.png" class="center-block img-fluid" alt="Responsive image">
+<img src="img/meeting.jpg" class="center-block img-fluid" alt="Responsive image" style="height: 500px;" >
 </div>
 
 

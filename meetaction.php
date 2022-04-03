@@ -55,7 +55,28 @@
 							<label style="position:relative; top:7px;">head</label>
 						</div>
 						<div class="col-lg-9">
-							<input type="text" name="head" class="form-control" value="<?php echo $erow['head']; ?>">
+						<select name="head" id="" class="form-control">
+					
+									<?php $arr = [
+										"head1"=>"นายกเทศมนตรี",
+										"head2"=>"รองนายกเทศมนตรี1",
+										"head3"=>"รองนายกเทศมนตรี2",
+										"head4"=>"รองนายกเทศมนตรี3"
+									];
+								
+									foreach($arr as $x){
+									?>
+									<?php if($erow['head']==$x){ ?>
+										<option value="<?php echo $erow['head']?>" selected><?php echo $erow['head']?></option>
+									<?php }else{ ?>
+										<option value="<?php echo $x?>"><?php echo $x?></option>
+
+									<?php }?>
+									<?php }?>
+					
+
+								
+							</select>
 						</div>
 					</div>
                     <div style="height:10px;"></div>
@@ -69,18 +90,25 @@
 					</div>
 					<div style="height:10px;"></div>
 
-                    <div class="row">
+					<div style="height:10px;"></div>
+					<div class="row">
 						<div class="col-lg-3">
-							<label style="position:relative; top:7px;">roomid</label>
+							<label class="control-label" style="position:relative; top:7px;">roomid</label>
 						</div>
 						<div class="col-lg-9">
-							<input type="text" name="roomid" class="form-control" value="<?php echo $erow['roomid']; ?>">
+							
+							<select name="roomid" id="" class="form-control">
+								<?php 		$query1=mysqli_query($conn,"select * from room");
+											while($rowx=mysqli_fetch_array($query1)){?>
+									<?php if($rowx['roomid'] == $erow['roomid']){ ?>
+										<option value="<?php echo $rowx['roomid']?>" selected><?php echo $rowx['roomname']?></option>
+									<?php }else{ ?>
+										<option value="<?php echo $rowx['roomid']?>"><?php echo $rowx['roomname']?></option>
+									<?php } ?>
+								<?php } ?>
+							</select>
 						</div>
-                        <div style="height:10px;"></div>
-				
-
-
-					</div>	
+					</div>
 					<div style="height:10px;"></div>
 		
 					<div class="row">
@@ -100,11 +128,27 @@
 						<div class="col-lg-9">
 							<input type="datetime" class="form-control" name="end" value="<?php echo $erow['end'];?>">
 						</div>
+					</div>	
+					<div style="height:10px;"></div>
+					<div class="row">
+						<div class="col-lg-3">
+							<label class="control-label" style="position:relative; top:7px;">addequipment</label>
+						</div>
+						<div class="col-lg-9">
+							<input type="datetime" class="form-control" name="addequipment" value="<?php echo $erow['addequipment'];?>">
+						</div>
 					</div>		
 					<div style="height:10px;"></div>
 					<div class="row">
-					</div>
-
+						<div class="col-lg-3">
+							<label class="control-label" style="position:relative; top:7px;">remark</label>
+						</div>
+						<div class="col-lg-9">
+							<input type="datetime" class="form-control" name="remark" value="<?php echo $erow['remark'];?>">
+						</div>
+					</div>			
+				
+					
                 </div> 
 				</div>	
                 <div class="modal-footer">
