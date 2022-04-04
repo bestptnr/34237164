@@ -146,8 +146,17 @@
 						<div class="col-lg-9">
 							<input type="datetime" class="form-control" name="remark" value="<?php echo $erow['remark'];?>">
 						</div>
+					</div>		
+					<div style="height:10px;"></div>
+					<div class="row">
+						<div class="col-lg-3">
+							<label class="control-label" style="position:relative; top:7px;">remark</label>
+						</div>
+						<div class="col-lg-9">
+							<input type="color" class="form-control" name="color" value="<?php echo $erow['color'];?>">
+						</div>
 					</div>			
-				
+										
 					
                 </div> 
 				</div>	

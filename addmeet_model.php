@@ -14,6 +14,7 @@
 	$userid = $_SESSION['userid'];
 	$remark = $_POST['remark'];
 	$file=$_FILES['meetfile'];
+	$color = $_POST['color'];
 	$filename=$_FILES["meetfile"]["name"];
 	$filTmpename= $_FILES["meetfile"]["tmp_name"];
 	$fileExt= explode(".",$filename);
@@ -24,7 +25,7 @@
 	$meetfilelocation=$fileDes;
 	
 	
-	$sql = "INSERT INTO events(title,head,numattend,listname,roomid,start,end,addequipment,uesrid,remark,meetfile) VALUES ('$title','$head',$numattend,'$listname',$roomid,'$start','$end','$addequipment',$userid,'$remark','$meetfilelocation')";
+	$sql = "INSERT INTO events(title,head,numattend,listname,roomid,start,end,addequipment,uesrid,remark,meetfile,color) VALUES ('$title','$head',$numattend,'$listname',$roomid,'$start','$end','$addequipment',$userid,'$remark','$meetfilelocation','$color')";
 	mysqli_query($conn,$sql);
 	
 	header('location:addmeet.php');

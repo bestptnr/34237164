@@ -9,9 +9,9 @@
 	$end = $_POST['end'];
 	$addequipment = $_POST['addequipment'];
 	$remark = $_POST['remark'];
-
+	$color = $_POST['color'];
 	
-	mysqli_query($conn,"update events set roomid='$roomid', title='$title',  head='$head', start='$start',end='$end',numattend='$numattend',remark='$remark',addequipment='$addequipment' where id='$meetid'");
+	mysqli_query($conn,"update events set roomid='$roomid', title='$title',  head='$head', start='$start',end='$end',numattend='$numattend',remark='$remark',addequipment='$addequipment',color='$color' where id='$meetid'");
 	// echo "update events set roomid='$roomid', title='$title',  head='$head', start='$start',end='$end',numattend='$numattend' where meetid='$meetid'";
 	header('location:addmeet.php');
 
